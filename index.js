@@ -14,7 +14,7 @@ function wrap(obj, key, log) {
     var args = [].slice.call(arguments);
     log('> ' + key + '(' + args.map(pretty).join(', ') + ')');
     var result = orig.apply(this, arguments);
-    log('< ' + pretty(result));
+    log('< ' + pretty(result) + '\n');
     return result;
   };
 }
